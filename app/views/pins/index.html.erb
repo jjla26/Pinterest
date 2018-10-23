@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+  <h1>Lista de Pins (<%= link_to 'Crear Nuevo Pin', new_pin_path %>)</h1>
+  
+  <div class="row">
+    
+    <% @pins.each do |pin| %>
+  
+    <div class="col-md-3">    
+      <div class="img-thumbnail">
+        <%= pin.description %>  
+        <%= image_tag(pin.photo, :class => "img-fluid") %>
+        <%= link_to 'Show', pin, :class => "btn btn-primary" %>
+        <%= link_to 'Edit', edit_pin_path(pin), :class => "btn btn-secondary" %>
+        <%= link_to 'Destroy', pin, :class => "btn btn-warning", method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <% end %>
+  
+  </div>        
+     
+      
+    
+  
+</div>
