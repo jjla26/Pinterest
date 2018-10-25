@@ -10,8 +10,9 @@
   
     <div class="col-md-3">    
       <div class="img-thumbnail">
-        <%= pin.description %>  
+        <%= pin.name %>
         <%= image_tag(pin.photo, :class => "img-fluid") %>
+        <%= pin.description %>
         <div class="buttons" style="margin-top: 10px;">
           <%= link_to 'Show', pin, :class => "btn btn-primary" %>
           <%= link_to 'Edit', edit_pin_path(pin), :class => "btn btn-secondary" %>
