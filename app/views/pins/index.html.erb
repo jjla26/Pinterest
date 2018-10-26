@@ -15,8 +15,10 @@
         <%= pin.description %>
         <div class="buttons" style="margin-top: 10px;">
           <%= link_to 'Show', pin, :class => "btn btn-primary" %>
-          <%= link_to 'Edit', edit_pin_path(pin), :class => "btn btn-secondary" %>
-          <%= link_to 'Destroy', pin, :class => "btn btn-warning", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% if user_signed_in? %>
+            <%= link_to 'Edit', edit_pin_path(pin), :class => "btn btn-secondary" %>
+            <%= link_to 'Destroy', pin, :class => "btn btn-warning", method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
         </div>
       </div>
     </div>

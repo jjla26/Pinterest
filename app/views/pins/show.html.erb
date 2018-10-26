@@ -18,8 +18,10 @@
           <strong>Photo:</strong>
           <%= image_tag(@pin.photo, :class => "img-fluid") %>
         </p>
-        <%= link_to 'Editar', edit_pin_path(@pin), :class => "btn btn-secondary" %>
         
+        <% if user_signed_in? %>
+          <%= link_to 'Editar', edit_pin_path(@pin), :class => "btn btn-secondary" %>
+        <% end %>
     </div>
     
   </div>
