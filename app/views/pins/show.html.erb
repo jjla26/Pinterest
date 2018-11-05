@@ -25,7 +25,7 @@
     </div>
     
   </div>
-  <p> <%= link_to 'Regresar', pins_path %></p>
+  <p> <%= link_to 'Regresar', pins_path %> | <%= link_to 'Mas pins del mismo usuario', pinsof_path(@pin.user.id) %></p>
 </div>
 
 
